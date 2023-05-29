@@ -1,0 +1,12 @@
+step 1 : setup sqlite3 in your system
+step 2 : cd project3
+step 3 : sqlite3 todos.db
+step 4 : .schema
+step 5 : insert into todos (title, description, priority, complete) values ('Go to the store', 'Pick up eggs',5, False);
+step 6 : select * from todos
+
+Information about table visualization:
+.mode column
+.mode markdown
+.mode box
+.mode table

@@ -1,0 +1,11 @@
+v-102
+step 1 : pip install "passlib[bcrypt]"
+step 2 : from passlib.context import CryptContext
+
+v-104
+step 1 : pip install python-multipart
+step 2 : from fastapi.security import OAAuth2PasswordRequestForm
+
+v-106
+step 1 : pip install "python-jose[cryptography]"
+step 2 : openssl rand -hex 32

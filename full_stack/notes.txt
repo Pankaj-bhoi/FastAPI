@@ -1,0 +1,35 @@
+v-141
+-----
+
+step 1 : create new directory called templates
+    full_stack -> templates -> home.html -> <h1>hello world</h1>
+
+step 2 : pip install aiofiles
+
+step 3 : pip install jinja2
+
+step 4 : routers -> todos.py -> from fastapi.responses  import HTMLResponse
+                     -> from fastapi.templating import Jinja2Templates
+                     -> from fastapi import Request
+                     -> tempaltes = Jinja2Templates(directory="templates")
+                     -> @router.get("/test")
+                        async def test(request :Request):
+                            return tempaltes.TemplateResponse("home.html", {"request" : request})
+
+v-142
+-----
+
+step 1 : full_stack -> static -> todo -> css -> base.css
+
+            h1 {
+                color : red;
+            }
+
+step 2 : full_stack -> static -> todo -> js
+
+step 3 : main.py -> from starlette.staticfiles import StaticFiles
+                    app.mount('/static/', StaticFiles(directory="static"), name="static")
+
+step 4 : home.html -> <head>
+                        <link rel="stylesheet" type="text/css" href="{{ url_for('static' , path='/todo/css/base.css') }}"></link>
+                      </head>
